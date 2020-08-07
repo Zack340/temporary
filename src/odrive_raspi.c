@@ -194,19 +194,19 @@ void *odrive_tic(void *pdata)
                     break;
             }
             
-//             real32_T pos;
-//             real32_T vel;
-//             union {int i; float f;}pos, vel, cur;
-            sprintf(send, "%s %d", "f", i);
-            odrive_sendMessage(od_f, send);
-            odrive_receiveMessage(od_f, receive, sizeof(receive));
-//             sscanf(receive, "%f %f", &pos, &vel);
-//             data->actualPosition[i] = pos;
-//             data->actualVelocity[i] = vel;
-            sscanf(receive, "%8x %8x %8x", &pos.i, &vel.i, &cur.i);
-            data->actualPosition[i] = pos.f;
-            data->actualVelocity[i] = vel.f;
-            data->actualCurrent[i] = cur.f;
+// //             real32_T pos;
+// //             real32_T vel;
+// //             union {int i; float f;}pos, vel, cur;
+//             sprintf(send, "%s %d", "f", i);
+//             odrive_sendMessage(od_f, send);
+//             odrive_receiveMessage(od_f, receive, sizeof(receive));
+// //             sscanf(receive, "%f %f", &pos, &vel);
+// //             data->actualPosition[i] = pos;
+// //             data->actualVelocity[i] = vel;
+//             sscanf(receive, "%8x %8x %8x", &pos.i, &vel.i, &cur.i);
+//             data->actualPosition[i] = pos.f;
+//             data->actualVelocity[i] = vel.f;
+//             data->actualCurrent[i] = cur.f;
             
 //             real32_T cur;
 //             sprintf(send, "%s%d%s", "r axis", i, ".motor.current_control.Iq_measured");
